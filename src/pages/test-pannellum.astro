@@ -1,0 +1,32 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>360 Test</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <style>
+    #panorama {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0;">
+  <div id="panorama"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script>
+    pannellum.viewer('panorama', {
+      "type": "equirectangular",
+      "panorama": "/images/RANGE-360.jpg",
+      "autoLoad": true,
+      "autoRotate": -2,
+      "showZoomCtrl": false,
+      "showFullscreenCtrl": false,
+      "yaw": 180
+    });
+  </script>
+</body>
+</html>

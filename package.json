@@ -1,0 +1,28 @@
+{
+  "name": "gun-range-insurance",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "astro": "^5.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1",
+    "framer-motion": "^11.0.3",
+    "lucide-react": "^0.312.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.33",
+    "autoprefixer": "^10.4.17"
+  }
+}

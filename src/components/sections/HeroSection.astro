@@ -1,0 +1,111 @@
+---
+import { motion } from 'framer-motion';
+---
+
+<section class="relative min-h-screen flex items-center justify-center px-4 py-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      client:load
+    >
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">
+        <span class="text-target-red font-extrabold" 
+              style="
+                text-shadow: 
+                  /* Multiple red glows */
+                  0 0 40px rgba(220, 38, 38, 1),
+                  0 0 80px rgba(220, 38, 38, 0.8),
+                  0 0 120px rgba(220, 38, 38, 0.6),
+                  /* Clean black outline without stroke */
+                  3px 3px 0 #000,
+                  -3px 3px 0 #000,
+                  3px -3px 0 #000,
+                  -3px -3px 0 #000,
+                  3px 0 0 #000,
+                  -3px 0 0 #000,
+                  0 3px 0 #000,
+                  0 -3px 0 #000,
+                  /* Depth shadows */
+                  0 6px 12px rgba(0, 0, 0, 0.8),
+                  0 10px 20px rgba(0, 0, 0, 0.6);
+              ">Gun Range</span>
+        <span class="text-white font-bold" 
+              style="
+                text-shadow: 
+                  /* Clean black outline */
+                  3px 3px 0 #000,
+                  -3px 3px 0 #000,
+                  3px -3px 0 #000,
+                  -3px -3px 0 #000,
+                  3px 0 0 #000,
+                  -3px 0 0 #000,
+                  0 3px 0 #000,
+                  0 -3px 0 #000,
+                  /* Depth */
+                  0 6px 12px rgba(0, 0, 0, 0.8),
+                  0 10px 20px rgba(0, 0, 0, 0.6);
+              "> Insurance</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto font-medium"
+         style="
+           text-shadow: 
+             2px 2px 4px rgba(0, 0, 0, 0.8),
+             0 4px 8px rgba(0, 0, 0, 0.6);
+         ">
+        Comprehensive coverage for shooting ranges, firearms businesses, and gun clubs across America
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="group relative px-10 py-4 overflow-hidden rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+          <!-- Deep crimson background -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blood-red via-crimson to-blood-red rounded-full"></div>
+          
+          <!-- Subtle glass layer -->
+          <div class="absolute inset-0 bg-white/5 rounded-full"></div>
+          
+          <!-- Red glow effect -->
+          <div class="absolute inset-0 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+               style="box-shadow: 
+                 0 0 40px rgba(185, 28, 28, 0.8),
+                 0 0 80px rgba(185, 28, 28, 0.5),
+                 inset 0 0 20px rgba(255, 255, 255, 0.1);"></div>
+          
+          <!-- Strong border -->
+          <div class="absolute inset-0 rounded-full border-2 border-red-700"></div>
+          
+          <!-- Text with shadow -->
+          <span class="relative z-10 text-white uppercase tracking-wider"
+                style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+            Get a Quote
+          </span>
+        </button>
+        
+        <button class="group relative px-10 py-4 overflow-hidden rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105">
+          <!-- Dark glass background -->
+          <div class="absolute inset-0 bg-black/40 backdrop-blur-md rounded-full border-2 border-white/30"></div>
+          
+          <!-- Hover glow -->
+          <div class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+               style="box-shadow: 
+                 0 0 30px rgba(255, 255, 255, 0.3),
+                 inset 0 0 20px rgba(255, 255, 255, 0.1);"></div>
+          
+          <!-- Text -->
+          <span class="relative z-10 text-white uppercase tracking-wider"
+                style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+            Learn More
+          </span>
+        </button>
+      </div>
+    </motion.div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+</section>
