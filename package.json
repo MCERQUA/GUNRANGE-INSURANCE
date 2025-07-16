@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "netlify": "netlify"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
