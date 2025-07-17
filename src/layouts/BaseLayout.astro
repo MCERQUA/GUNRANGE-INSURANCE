@@ -5,9 +5,20 @@ import MetalMenuBar from '../components/ui/MetalMenuBar.tsx';
 export interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
 }
 
-const { title, description = 'Gun Range Insurance - Comprehensive coverage for shooting ranges, firearms businesses, and gun clubs' } = Astro.props;
+const { 
+  title, 
+  description = 'Gun Range Insurance - Comprehensive coverage for shooting ranges, firearms businesses, and gun clubs. Get specialized liability, property, and professional insurance tailored for the firearms industry.',
+  keywords = 'gun range insurance, shooting range insurance, firearms business insurance, gun club insurance, liability coverage, property insurance, professional liability',
+  ogImage = '/images/gun-range-insurance-og.jpg',
+  canonicalUrl = Astro.url.href,
+  noindex = false
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -15,15 +26,117 @@ const { title, description = 'Gun Range Insurance - Comprehensive coverage for s
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Basic SEO Meta Tags -->
+    <title>{title} | Gun Range Insurance - Specialized Coverage for Firearms Businesses</title>
     <meta name="description" content={description} />
-    <title>{title} | Gun Range Insurance</title>
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Gun Range Insurance" />
+    <meta name="language" content="en" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Robots and Indexing -->
+    {noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- AI/LLM optimization file -->
+    <link rel="llms" href="/llms.txt" type="text/plain" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | Gun Range Insurance`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Gun Range Insurance" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | Gun Range Insurance`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
+    <meta name="twitter:site" content="@gunrangeinsurance" />
+    <meta name="twitter:creator" content="@gunrangeinsurance" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#e74c3c" />
+    <meta name="msapplication-TileColor" content="#e74c3c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Structured Data for Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "Gun Range Insurance",
+        "description": "Specialized insurance coverage for gun ranges, shooting ranges, firearms businesses, and gun clubs",
+        "url": "https://gunrangeinsurance.com",
+        "logo": "https://gunrangeinsurance.com/images/logo.png",
+        "image": "https://gunrangeinsurance.com/images/gun-range-insurance-og.jpg",
+        "telephone": "+1-800-GUN-RANGE",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "serviceArea": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Gun Range Insurance Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "General Liability Insurance",
+                "description": "Protection against third-party claims for bodily injury and property damage"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Property Insurance",
+                "description": "Coverage for building, equipment, and inventory protection"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Professional Liability Insurance",
+                "description": "Coverage for claims arising from professional services and instruction"
+              }
+            }
+          ]
+        }
+      }
+    </script>
     
     <!-- Favicon configuration -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/RANGE-360.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js" as="script">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     
     <!-- Pannellum CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
@@ -69,9 +182,43 @@ const { title, description = 'Gun Range Insurance - Comprehensive coverage for s
     <MetalMenuBar client:load />
     
     <!-- Main Content -->
-    <main class="min-h-screen relative z-10">
+    <main class="min-h-screen relative z-10" role="main">
       <slot />
     </main>
+    
+    <!-- Footer for additional SEO value -->
+    <footer class="bg-tactical-black/90 backdrop-blur-sm border-t border-silver/20 py-8 relative z-10">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <div class="grid md:grid-cols-3 gap-8 mb-6">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-3">Gun Range Insurance</h3>
+            <p class="text-silver text-sm">Specialized insurance coverage for shooting ranges, firearms businesses, and gun clubs nationwide.</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-3">Quick Links</h4>
+            <nav aria-label="Footer navigation">
+              <ul class="space-y-2 text-sm">
+                <li><a href="#coverage" class="text-silver hover:text-target-red transition-colors">Coverage Options</a></li>
+                <li><a href="#services" class="text-silver hover:text-target-red transition-colors">Our Services</a></li>
+                <li><a href="/blog" class="text-silver hover:text-target-red transition-colors">Insurance Blog</a></li>
+                <li><a href="#contact" class="text-silver hover:text-target-red transition-colors">Get a Quote</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white mb-3">Contact Info</h4>
+            <div class="text-silver text-sm space-y-2">
+              <p>📞 <a href="tel:+18004867264" class="hover:text-target-red transition-colors">1-800-GUN-RANGE</a></p>
+              <p>📧 <a href="mailto:info@gunrangeinsurance.com" class="hover:text-target-red transition-colors">info@gunrangeinsurance.com</a></p>
+              <p>🇺🇸 Serving gun ranges nationwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-silver/20 pt-6">
+          <p class="text-silver text-sm">&copy; 2024 Gun Range Insurance. All rights reserved. Professional insurance services for the firearms industry.</p>
+        </div>
+      </div>
+    </footer>
     
     <!-- Pannellum JS -->
     <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>

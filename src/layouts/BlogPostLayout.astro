@@ -15,6 +15,33 @@ const pageTitle = `${title} - Gun Range Insurance Blog`;
 ---
 
 <BaseLayout title={pageTitle} description={excerpt}>
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": excerpt,
+      "image": image ? new URL(image, Astro.site).href : new URL('/images/gun-range-insurance-og.jpg', Astro.site).href,
+      "author": {
+        "@type": "Person",
+        "name": author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Gun Range Insurance",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://gunrangeinsurance.com/images/logo.png"
+        }
+      },
+      "datePublished": date.toISOString(),
+      "dateModified": date.toISOString(),
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": Astro.url.href
+      }
+    }
+  </script>
   <div class="min-h-screen bg-gradient-to-br from-tactical-black via-gunmetal to-steel">
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-4">

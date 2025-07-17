@@ -26,6 +26,35 @@ const defaultNavItems: NavItem[] = [
 export function MetalMenuBar({ items = defaultNavItems, className }: MetalMenuBarProps) {
   const [activeTab, setActiveTab] = React.useState(items[0].name);
 
+  // Determine active tab based on current URL
+  React.useEffect(() => {
+    const currentPath = window.location.pathname;
+    
+    // Find matching nav item based on current path
+    let activeItem = items[0].name; // Default to first item
+    
+    if (currentPath === '/') {
+      activeItem = 'Home';
+    } else if (currentPath.startsWith('/blog')) {
+      activeItem = 'Blog';
+    } else {
+      // Check if current path matches any nav item URL
+      const matchingItem = items.find(item => {
+        if (item.url.startsWith('#')) {
+          // For hash links, check if we're on home page
+          return currentPath === '/' && window.location.hash === item.url;
+        }
+        return currentPath === item.url || currentPath.startsWith(item.url + '/');
+      });
+      
+      if (matchingItem) {
+        activeItem = matchingItem.name;
+      }
+    }
+    
+    setActiveTab(activeItem);
+  }, [items]);
+
   const handleNavClick = (itemName: string) => {
     setActiveTab(itemName);
   };

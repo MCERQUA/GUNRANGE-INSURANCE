@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://gunrangeinsurance.com/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://gunrangeinsurance.com/images/gun-range-insurance-og.jpg</image:loc>
+      <image:caption>Gun Range Insurance - Comprehensive coverage for shooting ranges and firearms businesses</image:caption>
+      <image:title>Gun Range Insurance Services</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Blog Index -->
+  <url>
+    <loc>https://gunrangeinsurance.com/blog/</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://gunrangeinsurance.com/blog/understanding-gun-range-insurance/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gunrangeinsurance.com/images/gun-range-safety.jpg</image:loc>
+      <image:caption>Understanding Gun Range Insurance - A Complete Guide</image:caption>
+      <image:title>Gun Range Safety and Insurance</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://gunrangeinsurance.com/blog/liability-coverage-essentials/</loc>
+    <lastmod>2024-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gunrangeinsurance.com/images/range-insurance.jpg</image:loc>
+      <image:caption>Liability Coverage Essentials for Shooting Ranges</image:caption>
+      <image:title>Shooting Range Liability Insurance</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://gunrangeinsurance.com/blog/safety-protocols-insurance/</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://gunrangeinsurance.com/images/safety-first.jpg</image:loc>
+      <image:caption>How Safety Protocols Impact Your Insurance Rates</image:caption>
+      <image:title>Gun Range Safety Protocols</image:title>
+    </image:image>
+  </url>
+  
+  <!-- AI/LLM optimization file -->
+  <url>
+    <loc>https://gunrangeinsurance.com/llms.txt</loc>
+    <lastmod>2024-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
