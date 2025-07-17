@@ -1,0 +1,87 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../utils/formatDate';
+
+interface Props {
+  title: string;
+  date: Date;
+  author: string;
+  excerpt: string;
+  image?: string;
+}
+
+const { title, date, author, excerpt, image } = Astro.props;
+const pageTitle = `${title} - Gun Range Insurance Blog`;
+---
+
+<BaseLayout title={pageTitle} description={excerpt}>
+  <div class="min-h-screen bg-gradient-to-br from-tactical-black via-gunmetal to-steel">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumb -->
+        <nav class="mb-8">
+          <a href="/blog" class="text-target-red hover:text-safety-orange transition-colors text-sm font-medium">
+            ← Back to Blog
+          </a>
+        </nav>
+        
+        <!-- Article Header -->
+        <header class="text-center mb-12">
+          <div class="flex items-center justify-center text-sm text-brass mb-4">
+            <time>{formatDate(date)}</time>
+            <span class="mx-2">•</span>
+            <span>By {author}</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-target-red via-safety-orange to-brass bg-clip-text text-transparent leading-tight">
+            {title}
+          </h1>
+          
+          <p class="text-xl text-silver max-w-3xl mx-auto leading-relaxed">
+            {excerpt}
+          </p>
+        </header>
+        
+        <!-- Featured Image Placeholder -->
+        {image && (
+          <div class="h-64 md:h-80 bg-gradient-to-br from-tactical-black to-gunmetal rounded-lg flex items-center justify-center mb-12 border border-silver/20">
+            <div class="w-20 h-20 rounded-full bg-target-red/20 flex items-center justify-center">
+              <svg class="w-10 h-10 text-target-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-gradient-to-br from-gunmetal/60 to-steel/40 backdrop-blur-sm border border-silver/20 rounded-lg p-8 md:p-12">
+          <div class="prose prose-lg max-w-none 
+                      prose-headings:text-white prose-headings:font-bold
+                      prose-p:text-silver prose-p:leading-relaxed
+                      prose-strong:text-white
+                      prose-a:text-target-red prose-a:no-underline hover:prose-a:text-safety-orange
+                      prose-blockquote:border-l-target-red prose-blockquote:bg-tactical-black/50 prose-blockquote:text-silver
+                      prose-ul:text-silver prose-li:text-silver
+                      prose-ol:text-silver">
+            <slot />
+          </div>
+        </div>
+        
+        <!-- Navigation to other posts -->
+        <div class="mt-12 text-center">
+          <a href="/blog" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-target-red to-crimson text-white font-medium rounded-lg hover:from-crimson hover:to-blood-red transition-all duration-300 hover:shadow-[0_4px_20px_rgba(231,76,60,0.4)]">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+            </svg>
+            View All Posts
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

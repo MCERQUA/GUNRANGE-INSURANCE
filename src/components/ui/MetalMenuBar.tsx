@@ -19,7 +19,7 @@ const defaultNavItems: NavItem[] = [
   { name: 'Home', url: '/', icon: Home },
   { name: 'Coverage', url: '#coverage', icon: Shield },
   { name: 'Services', url: '#services', icon: Target },
-  { name: 'Claims', url: '#claims', icon: FileText },
+  { name: 'Blog', url: '/blog', icon: FileText },
   { name: 'Contact', url: '#contact', icon: Phone }
 ];
 
