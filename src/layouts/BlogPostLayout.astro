@@ -12,6 +12,12 @@ interface Props {
 
 const { title, date, author, excerpt, image } = Astro.props;
 const pageTitle = `${title} - Gun Range Insurance Blog`;
+
+// Create absolute URLs safely
+const siteUrl = Astro.site?.href || 'https://gunrangeinsurance.com';
+const absoluteImage = image ? 
+  (image.startsWith('http') ? image : new URL(image, siteUrl).href) : 
+  new URL('/images/gun-range-insurance-og.jpg', siteUrl).href;
 ---
 
 <BaseLayout title={pageTitle} description={excerpt}>
@@ -21,7 +27,7 @@ const pageTitle = `${title} - Gun Range Insurance Blog`;
       "@type": "BlogPosting",
       "headline": title,
       "description": excerpt,
-      "image": image ? new URL(image, Astro.site).href : new URL('/images/gun-range-insurance-og.jpg', Astro.site).href,
+      "image": absoluteImage,
       "author": {
         "@type": "Person",
         "name": author
@@ -31,7 +37,7 @@ const pageTitle = `${title} - Gun Range Insurance Blog`;
         "name": "Gun Range Insurance",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://gunrangeinsurance.com/images/logo.png"
+          "url": new URL('/images/logo.png', siteUrl).href
         }
       },
       "datePublished": date.toISOString(),

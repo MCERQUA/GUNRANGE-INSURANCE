@@ -19,6 +19,11 @@ const {
   canonicalUrl = Astro.url.href,
   noindex = false
 } = Astro.props;
+
+// Create absolute URLs safely
+const siteUrl = Astro.site?.href || 'https://gunrangeinsurance.com';
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).href;
+const absoluteCanonicalUrl = canonicalUrl.startsWith('http') ? canonicalUrl : new URL(canonicalUrl, siteUrl).href;
 ---
 
 <!DOCTYPE html>
@@ -39,7 +44,7 @@ const {
     {noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />}
     
     <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalUrl} />
+    <link rel="canonical" href={absoluteCanonicalUrl} />
     
     <!-- AI/LLM optimization file -->
     <link rel="llms" href="/llms.txt" type="text/plain" />
@@ -48,8 +53,8 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={`${title} | Gun Range Insurance`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
-    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={absoluteOgImage} />
+    <meta property="og:url" content={absoluteCanonicalUrl} />
     <meta property="og:site_name" content="Gun Range Insurance" />
     <meta property="og:locale" content="en_US" />
     
@@ -57,7 +62,7 @@ const {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Gun Range Insurance`} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
+    <meta name="twitter:image" content={absoluteOgImage} />
     <meta name="twitter:site" content="@gunrangeinsurance" />
     <meta name="twitter:creator" content="@gunrangeinsurance" />
     
@@ -74,9 +79,9 @@ const {
         "@type": "InsuranceAgency",
         "name": "Gun Range Insurance",
         "description": "Specialized insurance coverage for gun ranges, shooting ranges, firearms businesses, and gun clubs",
-        "url": "https://gunrangeinsurance.com",
-        "logo": "https://gunrangeinsurance.com/images/logo.png",
-        "image": "https://gunrangeinsurance.com/images/gun-range-insurance-og.jpg",
+        "url": siteUrl,
+        "logo": new URL('/images/logo.png', siteUrl).href,
+        "image": absoluteOgImage,
         "telephone": "+1-800-GUN-RANGE",
         "address": {
           "@type": "PostalAddress",
