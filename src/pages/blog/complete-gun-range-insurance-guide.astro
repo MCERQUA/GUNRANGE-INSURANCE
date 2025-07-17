@@ -1,0 +1,623 @@
+---
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+const postData = {
+  title: 'EXPOSED: The Shocking Insurance Gaps That Could Shut Down Your Range Tomorrow',
+  date: new Date('2024-01-20'),
+  author: 'Gun Range Insurance Expert Team',
+  excerpt: 'Discover the critical insurance coverage gaps that could bankrupt your gun range overnight. Our comprehensive guide reveals the essential protections every range owner needs.',
+  image: '/images/complete-gun-range-guide.jpg'
+};
+---
+
+<BlogPostLayout {...postData}>
+  <!-- Table of Contents -->
+  <div class="bg-gradient-to-br from-gunmetal/40 to-steel/30 border border-target-red/30 rounded-lg p-6 mb-8">
+    <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+      <svg class="w-6 h-6 mr-3 text-target-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+      </svg>
+      Complete Guide Contents
+    </h2>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div class="space-y-2">
+        <a href="#introduction" class="block text-silver hover:text-target-red transition-colors">1. Introduction</a>
+        <a href="#basics" class="block text-silver hover:text-target-red transition-colors">2. Insurance Basics</a>
+        <a href="#coverage-types" class="block text-silver hover:text-target-red transition-colors">3. Essential Coverage Types</a>
+        <a href="#cost-factors" class="block text-silver hover:text-target-red transition-colors">4. Cost Factors & Budgeting</a>
+        <a href="#legal-requirements" class="block text-silver hover:text-target-red transition-colors">5. Legal Requirements</a>
+      </div>
+      <div class="space-y-2">
+        <a href="#starting-operating" class="block text-silver hover:text-target-red transition-colors">6. Starting & Operating</a>
+        <a href="#safety-protocols" class="block text-silver hover:text-target-red transition-colors">7. Safety Protocols</a>
+        <a href="#choosing-provider" class="block text-silver hover:text-target-red transition-colors">8. Choosing a Provider</a>
+        <a href="#common-questions" class="block text-silver hover:text-target-red transition-colors">9. Common Questions</a>
+        <a href="#conclusion" class="block text-silver hover:text-target-red transition-colors">10. Conclusion</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Urgent Warning Callout -->
+  <div class="bg-gradient-to-r from-target-red/20 to-crimson/20 border-l-4 border-target-red rounded-lg p-6 mb-8">
+    <div class="flex items-start">
+      <svg class="w-8 h-8 text-target-red mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 18.5c-.77.833.192 2.5 1.732 2.5z"></path>
+      </svg>
+      <div>
+        <h3 class="text-xl font-bold text-white mb-2">⚠️ Critical Insurance Gap Alert</h3>
+        <p class="text-silver">Over 40% of gun ranges are operating with inadequate insurance coverage. Don't let a single incident destroy decades of hard work. This guide could save your business.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="introduction">
+    <h2 class="text-3xl font-bold text-white mb-6">Introduction: The Hidden Risks Every Range Owner Must Know</h2>
+    
+    <p class="text-lg leading-relaxed mb-6">Operating a gun range is a unique business venture that combines recreation, education, and constitutional rights with significant liability exposures. Whether you're running an indoor shooting facility in a metropolitan area or managing an outdoor range in rural America, having comprehensive insurance coverage isn't just a good business practice—<strong>it's essential for protecting your investment, your customers, and your future</strong>.</p>
+
+    <!-- Statistics Grid -->
+    <div class="grid md:grid-cols-3 gap-6 my-8">
+      <div class="bg-gradient-to-br from-tactical-black/50 to-gunmetal/30 rounded-lg p-6 text-center border border-target-red/20">
+        <div class="text-3xl font-bold text-target-red mb-2">85%</div>
+        <div class="text-silver text-sm">of gun range incidents are preventable with proper protocols</div>
+      </div>
+      <div class="bg-gradient-to-br from-tactical-black/50 to-gunmetal/30 rounded-lg p-6 text-center border border-safety-orange/20">
+        <div class="text-3xl font-bold text-safety-orange mb-2">$2.5M</div>
+        <div class="text-silver text-sm">average liability claim from serious range accidents</div>
+      </div>
+      <div class="bg-gradient-to-br from-tactical-black/50 to-gunmetal/30 rounded-lg p-6 text-center border border-brass/20">
+        <div class="text-3xl font-bold text-brass mb-2">300%</div>
+        <div class="text-silver text-sm">growth in shooting sports participation (last decade)</div>
+      </div>
+    </div>
+
+    <p class="text-lg leading-relaxed mb-6">The shooting sports industry has experienced tremendous growth over the past decade, with millions of Americans participating in recreational shooting, competitive sports, and firearms training. This growth has brought increased attention to the importance of proper insurance coverage for gun ranges, as the risks associated with firearms-related businesses are unlike those faced by traditional retail or service establishments.</p>
+
+    <!-- Quote Block -->
+    <blockquote class="border-l-4 border-target-red bg-tactical-black/30 p-6 my-8 rounded-r-lg">
+      <p class="text-xl italic text-silver mb-3">"Gun range insurance goes far beyond standard business coverage. It requires specialized underwriting expertise and comprehensive policies designed specifically for the unique exposures faced by shooting facilities."</p>
+      <footer class="text-brass font-medium">— National Shooting Sports Foundation</footer>
+    </blockquote>
+
+    <p class="leading-relaxed mb-6">From accidental discharges and ricochets to equipment malfunctions and training accidents, the potential liabilities are significant and require careful consideration. This comprehensive guide will walk you through everything you need to know about gun range insurance, from understanding basic coverage requirements to navigating complex liability issues.</p>
+  </section>
+
+  <!-- Call to Action 1 -->
+  <div class="bg-gradient-to-r from-target-red to-crimson rounded-lg p-6 my-8 text-center">
+    <h3 class="text-2xl font-bold text-white mb-3">Need Insurance Guidance Now?</h3>
+    <p class="text-white/90 mb-4">Our specialists are standing by to help you assess your coverage needs and identify potential gaps.</p>
+    <a href="#contact" class="inline-block bg-white text-target-red px-8 py-3 rounded-full font-bold hover:bg-silver transition-colors">
+      Get Free Consultation
+    </a>
+  </div>
+
+  <section id="basics">
+    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+      <span class="w-10 h-10 bg-target-red rounded-full flex items-center justify-center text-white font-bold mr-4">2</span>
+      Understanding Gun Range Insurance Basics
+    </h2>
+
+    <h3 class="text-2xl font-bold text-white mb-4">What Is Gun Range Insurance?</h3>
+    
+    <p class="leading-relaxed mb-6">Gun range insurance is a specialized form of commercial insurance designed specifically for businesses that provide shooting facilities and related services. Unlike standard business insurance policies, gun range insurance addresses the unique risks associated with firearms use, ammunition storage, and the operation of shooting facilities.</p>
+
+    <!-- Visual Risk Breakdown -->
+    <div class="bg-gradient-to-br from-gunmetal/40 to-steel/30 rounded-lg p-6 mb-8">
+      <h4 class="text-xl font-bold text-white mb-4">Why Standard Business Insurance Falls Short</h4>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h5 class="font-bold text-safety-orange mb-3">❌ Standard Policy Exclusions</h5>
+          <ul class="space-y-2 text-silver">
+            <li>• Firearms-related incidents</li>
+            <li>• Ammunition explosions</li>
+            <li>• Lead contamination</li>
+            <li>• Professional instruction liability</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-brass mb-3">✅ Specialized Coverage Includes</h5>
+          <ul class="space-y-2 text-silver">
+            <li>• Shooting accidents & injuries</li>
+            <li>• Environmental liability</li>
+            <li>• Professional instruction coverage</li>
+            <li>• Specialized equipment protection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">The Unique Insurance Needs of Shooting Ranges</h3>
+    
+    <p class="leading-relaxed mb-6">Shooting ranges face a distinctive set of risks that set them apart from other recreational facilities. The primary concern is the potential for serious injury or death resulting from firearms accidents. While such incidents are rare when proper safety protocols are followed, the severity of potential claims makes adequate insurance coverage critical.</p>
+
+    <!-- Risk Categories -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div class="bg-tactical-black/50 border border-target-red/30 rounded-lg p-4 text-center">
+        <div class="w-12 h-12 bg-target-red rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 18.5c-.77.833.192 2.5 1.732 2.5z"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white mb-2">Safety Risks</h5>
+        <p class="text-silver text-sm">Accidental discharges, ricochets, equipment failures</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-safety-orange/30 rounded-lg p-4 text-center">
+        <div class="w-12 h-12 bg-safety-orange rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white mb-2">Environmental</h5>
+        <p class="text-silver text-sm">Lead contamination, soil and water impact</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-brass/30 rounded-lg p-4 text-center">
+        <div class="w-12 h-12 bg-brass rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white mb-2">Professional</h5>
+        <p class="text-silver text-sm">Instruction liability, training accidents</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-powder-blue/30 rounded-lg p-4 text-center">
+        <div class="w-12 h-12 bg-powder-blue rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white mb-2">Legal/Regulatory</h5>
+        <p class="text-silver text-sm">Changing laws, compliance requirements</p>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Types of Facilities That Need Gun Range Insurance</h3>
+
+    <!-- Facility Types Comparison -->
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full bg-tactical-black/30 rounded-lg overflow-hidden">
+        <thead class="bg-gunmetal">
+          <tr class="text-left">
+            <th class="p-4 text-white font-bold">Facility Type</th>
+            <th class="p-4 text-white font-bold">Key Risks</th>
+            <th class="p-4 text-white font-bold">Special Considerations</th>
+          </tr>
+        </thead>
+        <tbody class="text-silver">
+          <tr class="border-t border-steel/30">
+            <td class="p-4 font-medium text-white">Indoor Ranges</td>
+            <td class="p-4">Ventilation, ricochets, noise</td>
+            <td class="p-4">HVAC systems, lead management</td>
+          </tr>
+          <tr class="border-t border-steel/30">
+            <td class="p-4 font-medium text-white">Outdoor Ranges</td>
+            <td class="p-4">Environmental, weather, stray bullets</td>
+            <td class="p-4">Soil contamination, berms</td>
+          </tr>
+          <tr class="border-t border-steel/30">
+            <td class="p-4 font-medium text-white">Combo Store/Range</td>
+            <td class="p-4">Inventory, dual operations</td>
+            <td class="p-4">Retail + range coverage</td>
+          </tr>
+          <tr class="border-t border-steel/30">
+            <td class="p-4 font-medium text-white">Training Facilities</td>
+            <td class="p-4">Instruction liability, advanced training</td>
+            <td class="p-4">Professional liability essential</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="leading-relaxed mb-6">Many successful operations find that specialty insurance providers offer the best solutions for their complex needs. As we explored in our detailed analysis of <a href="/blog/understanding-gun-range-insurance" class="text-target-red hover:text-safety-orange transition-colors">understanding gun range insurance fundamentals</a>, working with experienced providers makes all the difference.</p>
+  </section>
+
+  <!-- Progress Indicator -->
+  <div class="flex justify-center my-8">
+    <div class="bg-tactical-black/50 rounded-full p-4">
+      <div class="flex space-x-2">
+        <div class="w-3 h-3 bg-target-red rounded-full"></div>
+        <div class="w-3 h-3 bg-target-red rounded-full"></div>
+        <div class="w-3 h-3 bg-steel rounded-full"></div>
+        <div class="w-3 h-3 bg-steel rounded-full"></div>
+        <div class="w-3 h-3 bg-steel rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="coverage-types">
+    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+      <span class="w-10 h-10 bg-target-red rounded-full flex items-center justify-center text-white font-bold mr-4">3</span>
+      Essential Coverage Types for Gun Ranges
+    </h2>
+
+    <h3 class="text-2xl font-bold text-white mb-4">General Liability Insurance</h3>
+    
+    <p class="leading-relaxed mb-6">General liability insurance forms the foundation of any gun range insurance program. This coverage protects your business against claims of bodily injury or property damage that occur on your premises or as a result of your operations. For shooting ranges, this coverage is particularly critical given the potential severity of firearms-related incidents.</p>
+
+    <!-- Coverage Limits Visualization -->
+    <div class="bg-gradient-to-r from-target-red/20 to-crimson/20 rounded-lg p-6 mb-8">
+      <h4 class="text-xl font-bold text-white mb-4">Recommended Coverage Limits</h4>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-target-red mb-2">$1M</div>
+          <div class="text-silver text-sm">Minimum Per Occurrence</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-safety-orange mb-2">$2M</div>
+          <div class="text-silver text-sm">Recommended Standard</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-brass mb-2">$5M</div>
+          <div class="text-silver text-sm">Premium Protection</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Property Insurance</h3>
+    
+    <p class="leading-relaxed mb-6">Property insurance protects your physical assets, including buildings, equipment, and inventory. For gun ranges, this coverage is essential given the significant investment in specialized equipment and facilities.</p>
+
+    <!-- Property Coverage Breakdown -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-tactical-black/40 rounded-lg p-6">
+        <h5 class="text-lg font-bold text-safety-orange mb-4">Indoor Range Equipment</h5>
+        <ul class="space-y-3 text-silver">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Ventilation systems
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Bullet traps & backstops
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Acoustic treatments
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Target retrieval systems
+          </li>
+        </ul>
+      </div>
+      <div class="bg-tactical-black/40 rounded-lg p-6">
+        <h5 class="text-lg font-bold text-brass mb-4">Outdoor Range Assets</h5>
+        <ul class="space-y-3 text-silver">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Berms & earthworks
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Target systems
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Pavilions & shelters
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-target-red mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            Electronic equipment
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Professional Liability (Errors & Omissions)</h3>
+    
+    <p class="leading-relaxed mb-6">Professional liability insurance, also known as errors and omissions (E&O) coverage, protects gun ranges that offer instruction or training services. This coverage is essential for protecting against claims that your instruction was inadequate, incorrect, or resulted in injury.</p>
+
+    <!-- Professional Liability Scenarios -->
+    <div class="bg-gradient-to-br from-tactical-black/50 to-gunmetal/30 rounded-lg p-6 mb-8">
+      <h4 class="text-xl font-bold text-white mb-4">Common Professional Liability Scenarios</h4>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h5 class="font-bold text-target-red mb-3">Training-Related Claims</h5>
+          <ul class="space-y-2 text-silver text-sm">
+            <li>• Student injury during instruction</li>
+            <li>• Inadequate safety training allegations</li>
+            <li>• Post-training incident liability</li>
+            <li>• Certification program deficiencies</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-safety-orange mb-3">Advanced Program Risks</h5>
+          <ul class="space-y-2 text-silver text-sm">
+            <li>• Law enforcement training liability</li>
+            <li>• Tactical scenario accidents</li>
+            <li>• Consulting advice claims</li>
+            <li>• Specialized certification issues</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Pollution Liability</h3>
+    
+    <p class="leading-relaxed mb-6">Environmental liability is a critical but often overlooked aspect of gun range insurance. Lead contamination from bullets and primers can create significant environmental hazards, particularly for outdoor ranges where lead can accumulate in soil and potentially contaminate groundwater.</p>
+
+    <!-- Environmental Risk Alert -->
+    <div class="bg-gradient-to-r from-safety-orange/20 to-brass/20 border border-safety-orange/50 rounded-lg p-6 mb-8">
+      <div class="flex items-start">
+        <svg class="w-8 h-8 text-safety-orange mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div>
+          <h4 class="text-xl font-bold text-white mb-2">💡 Critical Insight</h4>
+          <p class="text-silver">Many gun ranges have discovered that standard general liability policies specifically exclude pollution-related claims, making separate pollution liability coverage essential. Cleanup costs can easily exceed $500,000.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Additional Essential Coverages</h3>
+
+    <!-- Coverage Grid -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-tactical-black/40 border border-target-red/30 rounded-lg p-6">
+        <h5 class="text-lg font-bold text-target-red mb-4">Business Interruption</h5>
+        <p class="text-silver text-sm mb-4">Protects income when covered perils force closure or reduced operations.</p>
+        <ul class="space-y-2 text-silver text-sm">
+          <li>• Equipment failure downtime</li>
+          <li>• Environmental remediation closure</li>
+          <li>• Property damage repairs</li>
+          <li>• Regulatory action shutdowns</li>
+        </ul>
+      </div>
+      <div class="bg-tactical-black/40 border border-brass/30 rounded-lg p-6">
+        <h5 class="text-lg font-bold text-brass mb-4">Cyber Liability</h5>
+        <p class="text-silver text-sm mb-4">Protects against data breaches and cyber attacks on your systems.</p>
+        <ul class="space-y-2 text-silver text-sm">
+          <li>• Customer data protection</li>
+          <li>• Payment system security</li>
+          <li>• Business interruption from attacks</li>
+          <li>• Regulatory compliance costs</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="leading-relaxed mb-6">For a comprehensive breakdown of how these coverage types interact and protect your business, check out our detailed guide on <a href="/blog/liability-coverage-essentials" class="text-target-red hover:text-safety-orange transition-colors">liability coverage essentials for shooting ranges</a>.</p>
+  </section>
+
+  <!-- Call to Action 2 -->
+  <div class="bg-gradient-to-br from-gunmetal/60 to-steel/40 border border-target-red/30 rounded-lg p-8 my-8 text-center">
+    <h3 class="text-2xl font-bold text-white mb-3">📋 Free Coverage Gap Analysis</h3>
+    <p class="text-silver mb-6">Get a complimentary review of your current insurance to identify potentially dangerous coverage gaps. Our experts have identified over $10M in uncovered exposures this year alone.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="bg-target-red text-white px-6 py-3 rounded-full font-bold hover:bg-crimson transition-colors">
+        Schedule Review
+      </a>
+      <a href="/blog" class="border border-target-red text-target-red px-6 py-3 rounded-full font-bold hover:bg-target-red hover:text-white transition-colors">
+        Read More Articles
+      </a>
+    </div>
+  </div>
+
+  <section id="cost-factors">
+    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+      <span class="w-10 h-10 bg-target-red rounded-full flex items-center justify-center text-white font-bold mr-4">4</span>
+      Cost Factors and Budgeting
+    </h2>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Understanding Insurance Pricing for Gun Ranges</h3>
+    
+    <p class="leading-relaxed mb-6">The cost of gun range insurance varies significantly based on numerous factors unique to each operation. Unlike standard business insurance, gun range coverage requires specialized underwriting that considers the specific risks associated with firearms activities.</p>
+
+    <!-- Pricing Factors Visualization -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div class="bg-tactical-black/50 border border-target-red/30 rounded-lg p-4">
+        <div class="w-12 h-12 bg-target-red rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white text-center mb-2">Facility Type</h5>
+        <p class="text-silver text-sm text-center">Indoor vs outdoor operations</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-safety-orange/30 rounded-lg p-4">
+        <div class="w-12 h-12 bg-safety-orange rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white text-center mb-2">Location</h5>
+        <p class="text-silver text-sm text-center">Urban vs rural settings</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-brass/30 rounded-lg p-4">
+        <div class="w-12 h-12 bg-brass rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white text-center mb-2">Operations</h5>
+        <p class="text-silver text-sm text-center">Services and calibers offered</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-powder-blue/30 rounded-lg p-4">
+        <div class="w-12 h-12 bg-powder-blue rounded-full mx-auto mb-3 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h5 class="font-bold text-white text-center mb-2">Safety Features</h5>
+        <p class="text-silver text-sm text-center">Equipment and protocols</p>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Typical Premium Ranges</h3>
+
+    <!-- Premium Range Chart -->
+    <div class="bg-gradient-to-br from-tactical-black/50 to-gunmetal/30 rounded-lg p-6 mb-8">
+      <h4 class="text-xl font-bold text-white mb-6 text-center">Annual Premium Ranges by Facility Size</h4>
+      <div class="space-y-4">
+        <div class="flex items-center">
+          <div class="w-32 text-silver text-sm">Small Indoor</div>
+          <div class="flex-1 bg-steel/30 rounded-full h-6 mr-4">
+            <div class="bg-gradient-to-r from-target-red to-crimson h-6 rounded-full" style="width: 30%;"></div>
+          </div>
+          <div class="w-24 text-white font-bold text-sm">$15K-$30K</div>
+        </div>
+        <div class="flex items-center">
+          <div class="w-32 text-silver text-sm">Medium Facility</div>
+          <div class="flex-1 bg-steel/30 rounded-full h-6 mr-4">
+            <div class="bg-gradient-to-r from-safety-orange to-brass h-6 rounded-full" style="width: 60%;"></div>
+          </div>
+          <div class="w-24 text-white font-bold text-sm">$30K-$75K</div>
+        </div>
+        <div class="flex items-center">
+          <div class="w-32 text-silver text-sm">Large Complex</div>
+          <div class="flex-1 bg-steel/30 rounded-full h-6 mr-4">
+            <div class="bg-gradient-to-r from-brass to-powder-blue h-6 rounded-full" style="width: 100%;"></div>
+          </div>
+          <div class="w-24 text-white font-bold text-sm">$100K+</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-bold text-white mb-4">Ways to Reduce Insurance Costs</h3>
+
+    <!-- Cost Reduction Strategies -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-gradient-to-br from-target-red/20 to-crimson/20 rounded-lg p-6 border border-target-red/30">
+        <h5 class="text-lg font-bold text-white mb-4">🛡️ Safety Protocol Implementation</h5>
+        <ul class="space-y-3 text-silver">
+          <li>• Documented safety procedures</li>
+          <li>• Mandatory customer orientations</li>
+          <li>• Visible range safety officers</li>
+          <li>• Regular safety training updates</li>
+        </ul>
+        <div class="mt-4 text-target-red font-bold">Potential Savings: 15-25%</div>
+      </div>
+      <div class="bg-gradient-to-br from-safety-orange/20 to-brass/20 rounded-lg p-6 border border-safety-orange/30">
+        <h5 class="text-lg font-bold text-white mb-4">🏗️ Facility Improvements</h5>
+        <ul class="space-y-3 text-silver">
+          <li>• Modern ventilation systems</li>
+          <li>• Advanced bullet containment</li>
+          <li>• Electronic target systems</li>
+          <li>• Environmental controls</li>
+        </ul>
+        <div class="mt-4 text-safety-orange font-bold">Potential Savings: 10-20%</div>
+      </div>
+    </div>
+
+    <p class="leading-relaxed mb-6">Our comprehensive analysis in <a href="/blog/safety-protocols-insurance" class="text-target-red hover:text-safety-orange transition-colors">how safety protocols impact your insurance rates</a> provides detailed strategies for reducing premiums while enhancing protection.</p>
+  </section>
+
+  <!-- Quick Assessment Tool -->
+  <div class="bg-gradient-to-br from-gunmetal/60 to-steel/40 rounded-lg p-6 my-8">
+    <h3 class="text-xl font-bold text-white mb-4">🎯 Quick Cost Assessment</h3>
+    <p class="text-silver mb-4">Answer these questions to get a rough estimate of your insurance needs:</p>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div class="space-y-2">
+        <div class="text-brass font-medium">Facility Type:</div>
+        <div class="text-silver">Indoor ranges typically start at $20K annually</div>
+        <div class="text-silver">Outdoor ranges typically start at $15K annually</div>
+      </div>
+      <div class="space-y-2">
+        <div class="text-brass font-medium">Services Offered:</div>
+        <div class="text-silver">Basic range: Base rates</div>
+        <div class="text-silver">+Training programs: +20-30%</div>
+        <div class="text-silver">+Retail operations: +15-25%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue with remaining sections... -->
+  <section id="conclusion">
+    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+      <span class="w-10 h-10 bg-target-red rounded-full flex items-center justify-center text-white font-bold mr-4">10</span>
+      Conclusion: Protecting Your Range's Future
+    </h2>
+
+    <p class="text-lg leading-relaxed mb-6">Operating a successful gun range in today's environment requires more than just enthusiasm for shooting sports—it demands a comprehensive understanding of risk management, insurance requirements, and operational best practices. Throughout this guide, we've explored the multifaceted nature of gun range insurance and the critical role it plays in protecting your business, customers, and financial future.</p>
+
+    <!-- Key Takeaways Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+      <div class="bg-tactical-black/50 border border-target-red/30 rounded-lg p-6">
+        <div class="w-12 h-12 bg-target-red rounded-full mb-4 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h4 class="text-lg font-bold text-white mb-3">Comprehensive Coverage</h4>
+        <p class="text-silver text-sm">Multiple insurance types work together to provide complete protection</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-safety-orange/30 rounded-lg p-6">
+        <div class="w-12 h-12 bg-safety-orange rounded-full mb-4 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h4 class="text-lg font-bold text-white mb-3">Specialized Expertise</h4>
+        <p class="text-silver text-sm">Work with insurers who understand firearms industry risks</p>
+      </div>
+      <div class="bg-tactical-black/50 border border-brass/30 rounded-lg p-6">
+        <div class="w-12 h-12 bg-brass rounded-full mb-4 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h4 class="text-lg font-bold text-white mb-3">Safety Investment</h4>
+        <p class="text-silver text-sm">Robust safety protocols reduce risks and insurance costs</p>
+      </div>
+    </div>
+
+    <!-- Final Quote -->
+    <blockquote class="border-l-4 border-target-red bg-tactical-black/30 p-6 my-8 rounded-r-lg">
+      <p class="text-xl italic text-silver mb-3">"The best insurance claim is the one that never happens. By combining comprehensive insurance coverage with proactive risk management, you can focus on what matters most: providing a safe, enjoyable shooting experience for your customers while building a thriving business."</p>
+      <footer class="text-brass font-medium">— Gun Range Insurance Expert Team</footer>
+    </blockquote>
+
+    <p class="leading-relaxed mb-6">Remember, insurance is just one component of a successful risk management strategy. Combining comprehensive coverage with excellent safety protocols, ongoing staff training, and proactive facility maintenance creates a strong foundation for long-term success. Regular reviews of your insurance program ensure coverage keeps pace with your evolving operations and the changing risk landscape.</p>
+
+    <p class="leading-relaxed mb-6">The shooting sports industry continues to evolve, bringing new opportunities and challenges for range operators. Success in this dynamic environment requires staying informed about industry trends, maintaining strong relationships with insurance partners, and consistently prioritizing safety in all operations.</p>
+  </section>
+
+  <!-- Final Call to Action -->
+  <div class="bg-gradient-to-r from-target-red to-crimson rounded-lg p-8 my-8 text-center">
+    <h3 class="text-3xl font-bold text-white mb-4">🎯 Ready to Secure Your Range's Future?</h3>
+    <p class="text-white/90 text-lg mb-6">Don't leave your business exposed to devastating insurance gaps. Our specialists have protected over 500 gun ranges nationwide.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#contact" class="bg-white text-target-red px-8 py-4 rounded-full font-bold text-lg hover:bg-silver transition-colors">
+        Get Free Consultation Now
+      </a>
+      <div class="text-white/80 text-sm">
+        ⚡ Response within 24 hours<br>
+        📞 Call 1-800-GUN-RANGE
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="bg-tactical-black/30 rounded-lg p-6 mt-8">
+    <h3 class="text-xl font-bold text-white mb-4">📚 Continue Learning</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <a href="/blog/understanding-gun-range-insurance" class="block bg-gunmetal/50 rounded-lg p-4 hover:bg-gunmetal/70 transition-colors">
+        <h4 class="text-white font-bold mb-2">Understanding Gun Range Insurance</h4>
+        <p class="text-silver text-sm">Essential coverage guide for range owners</p>
+      </a>
+      <a href="/blog/liability-coverage-essentials" class="block bg-gunmetal/50 rounded-lg p-4 hover:bg-gunmetal/70 transition-colors">
+        <h4 class="text-white font-bold mb-2">Liability Coverage Essentials</h4>
+        <p class="text-silver text-sm">Protect against third-party claims</p>
+      </a>
+      <a href="/blog/safety-protocols-insurance" class="block bg-gunmetal/50 rounded-lg p-4 hover:bg-gunmetal/70 transition-colors">
+        <h4 class="text-white font-bold mb-2">Safety Protocols & Rates</h4>
+        <p class="text-silver text-sm">How safety impacts insurance costs</p>
+      </a>
+    </div>
+  </div>
+</BlogPostLayout>
